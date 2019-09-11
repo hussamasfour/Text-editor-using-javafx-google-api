@@ -8,7 +8,8 @@
 <?import javafx.scene.layout.*?>
 
 <?import org.fxmisc.richtext.InlineCssTextArea?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<?import javafx.scene.effect.ColorAdjust?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hussam.NoteTaker.Controller">
     <center>
         <InlineCssTextArea BorderPane.alignment="CENTER" onKeyTyped="#handleTextAreaAction" fx:id="textArea" wrapText="true">
             <BorderPane.margin>
@@ -27,7 +28,7 @@
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                     </HBox.margin>
                 </Button>
-                <ComboBox fx:id="familyComboBox" onAction="#familyOnAction" promptText="Font Theme">
+                <ComboBox fx:id="FamilyComboBox" onAction="#familyOnAction" promptText="Font Theme">
                     <HBox.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                     </HBox.margin>
@@ -39,7 +40,7 @@
                         </FXCollections>
                     </items>
                 </ComboBox>
-                <ComboBox fx:id="sizeComboBox" layoutX="62.0" layoutY="10.0" onAction="#sizeOnAction" promptText="Font Size">
+                <ComboBox fx:id="SizeComboBox" layoutX="62.0" layoutY="10.0" onAction="#sizeOnAction" promptText="Font Size">
                     <HBox.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                     </HBox.margin>
@@ -93,7 +94,21 @@
                         </FXCollections>
                     </items>
                 </ComboBox>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label prefHeight="26.0" prefWidth="56.0" text="File Name:" textAlignment="CENTER" textFill="white">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                    <effect>
+                        <ColorAdjust />
+                    </effect>
+                </Label>
+                <TextField fx:id="FileName" prefHeight="25.0" prefWidth="131.0">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="5.0" top="2.0" />
 
+                    </HBox.margin>
+                </TextField>
             </children>
         </HBox>
     </top>
