@@ -7,11 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-//****IMPORTANT READ*****//
-//The Email credentials That this program will upload to is:
-//Email: csc330csi@gmail.com
-//pw: GiveMeAPlease
-//
 
 //The program will create a pdf of what you wrote in the home directory, either with the default name or a given name.
 //Then it will use that newly made pdf and upload it to google drive of the email that I have provided.
