@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.fxmisc.richtext.InlineCssTextArea?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <InlineCssTextArea BorderPane.alignment="CENTER" onKeyTyped="#handleTextAreaAction" fx:id="textArea" wrapText="true">
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+            </padding>
+        </InlineCssTextArea>
+    </center>
+    <top>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#UploadButtonClicked" text="Upload">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+                <ComboBox fx:id="familyComboBox" onAction="#familyOnAction" promptText="Font Theme">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Arial" />
+                            <String fx:value="Times new Roman" />
+                            <String fx:value="Calibri"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox fx:id="sizeComboBox" layoutX="62.0" layoutY="10.0" onAction="#sizeOnAction" promptText="Font Size">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="11" />
+                            <String fx:value="12" />
+                            <String fx:value="14" />
+                            <String fx:value="18" />
+                            <String fx:value="24" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox fx:id="ColorBoxColor" layoutX="180.0" layoutY="10.0" onAction="#colorOnAction" promptText="Font Color">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Red" />
+                            <String fx:value="Black" />
+                            <String fx:value="Green" />
+                            <String fx:value="Yellow" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <ComboBox fx:id="StyleComboBox" layoutX="302.0" layoutY="10.0" onAction="#styleOnAction" promptText="Style">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Italic" />
+                            <String fx:value="Normal" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <ComboBox fx:id="WeightComboBox" layoutX="422.0" layoutY="10.0" onAction="#weightOnAction" promptText="Weight">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Bold" />
+                            <String fx:value="Normal" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+            </children>
+        </HBox>
+    </top>
+</BorderPane>
